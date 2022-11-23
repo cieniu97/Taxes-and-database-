@@ -1,1 +1,17 @@
-alias phpunit="/var/www/html/vendor/bin/phpunit"
+This is task for a job interview at Inter System
+
+1. Create OOP based class to calculate taxes in given countries.
+2. Connect to test database and perform given queries.
+
+
+Realisation:
+Whole task is set up for easy recreation using docker in a way that can be used in DEV.
+HOW TO RUN IT?
+1. Download repo
+2. Navigate to main directory
+3. Run docker compose up -d
+  This will build php image, install composer and required PHPUnit.
+  (PHPUnit should not be present in production!!!)
+4. You can now go into container shell via 
+  docker exec -it contaner_name /bin/bash
+5. Now navigate into /var/www/html and execute ./vendor/bin/phpunit to run tests
