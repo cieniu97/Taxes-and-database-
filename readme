@@ -1,0 +1,1 @@
+alias phpunit="/var/www/html/vendor/bin/phpunit"
