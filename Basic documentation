@@ -1,0 +1,45 @@
+Classes:
+    GermanTax:
+        Description: Processor for taxes in germany
+        Properties: None
+        Methods:
+            getTax: 
+                Description: Calculate tax in Germany
+                Parameters: float price - innitial price
+                Return: Float tax - A cost of a tax in a product
+
+    BritishTax:
+        Description: Processor for taxes in Britan
+        Properties: None
+        Methods:
+            getTax: 
+                Description: Calculate tax in Britan
+                Parameters: float price - innitial price
+                Return: Float tax - A cost of a tax in a product 
+
+    PolishTax:
+        Description: Processor for taxes in Poland
+        Properties: None
+        Methods:
+            getTax: 
+                Description: Calculate tax in Poland
+                Parameters: float price - innitial price
+                Return: Float tax - A cost of a tax in a product
+    Taxes:
+        Description: Main node of calculating taxes, it is done in a way that allows for dependancy injection of tax processors.
+        Properties:
+            protected processor - which tax processor to use
+        Constructor: processor - tax processor
+        Methods:
+            calc:
+                Description: Calculate tax by given tax processor
+                Parameters: float price - innitial price
+                Return: float tax - A cost of a tax in a product
+    DatabaseConnection:
+        Description: Innitiates connection to MYSQL database by given
+        Parameters: public connection - PDO MYSQL connection to be used in performing queries
+        Constructor:
+            - string serverName - adress for host
+            - string databaseName - name of database
+            - string userName - name of user
+            - string password - users password
